@@ -2,6 +2,13 @@
 
 @implementation UIImage (MuseUI)
 
++ (UIImage *)emptyImageWithSize:(CGSize)size {
+    UIGraphicsBeginImageContext(size);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 + (void)loadFromURL:(NSURL*)url callback:(void (^)(UIImage *image))callback {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
