@@ -1,7 +1,7 @@
 Package: com.bid3v.museui
 Name: MuseUI
 Depends: firmware (>= 13.0), mobilesubstrate
-Version: 0.0.3
+Version: 0.0.4
 Architecture: iphoneos-arm
 Description: A framework for biD3V's Muse HSWidgets!
 Maintainer: biD3V
